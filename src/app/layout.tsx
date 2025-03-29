@@ -1,10 +1,12 @@
+import { ThemeProvider } from "@/components/theme-provider";
 import classNames from "classnames";
 import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "GCP Image Viewer",
-  description: "Simplify GCP image link access with RoundTechSquare's efficient viewer for developers",
+  title: "GCP Media Viewer",
+  description:
+    "Simplify GCP media link access with RoundTechSquare's efficient viewer for developers",
 };
 
 export default function RootLayout({
@@ -13,29 +15,40 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" href="/icon.png" />
         <meta name="theme-color" content="#e0c8fd" />
 
-        <meta property="og:title" content="Nextjs App" />
-        <meta name="twitter:title" content="Nextjs App" />
+        <meta property="og:title" content="GCP Image Viewer" />
+        <meta name="twitter:title" content="GCP Image Viewer" />
 
-        <meta name="description" content="Nextjs 14 starter template" />
-        <meta property="og:description" content="Nextjs 14 starter template" />
-        <meta name="twitter:description" content="Nextjs 14 starter template" />
+        <meta
+          name="description"
+          content="Simplify GCP image link access with RoundTechSquare's efficient viewer for developers"
+        />
+        <meta
+          property="og:description"
+          content="Simplify GCP image link access with RoundTechSquare's efficient viewer for developers"
+        />
+        <meta
+          name="twitter:description"
+          content="Simplify GCP image link access with RoundTechSquare's efficient viewer for developers"
+        />
 
         <meta property="og:image" content="https://i.imgur.com/Z3bMJXy.jpg" />
         <meta name="twitter:image" content="https://i.imgur.com/Z3bMJXy.jpg" />
       </head>
       {/* //! If you don't want 'screen size' visible at the left bottom of the browser window, You can remove `debug-screens` class */}
       <body
-        className={classNames("antialiased", {
+        className={classNames("min-h-screen antialiased", {
           "debug-screens": process.env.NODE_ENV === "development",
         })}
       >
-        {children}
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          <main className="flex h-screen w-full flex-col">{children}</main>
+        </ThemeProvider>
       </body>
     </html>
   );
