@@ -193,7 +193,7 @@ export function MediaViewer({ url }: MediaViewerProps) {
             variant="secondary"
             size="icon"
             onClick={toggleFullscreen}
-            className="size-8 sm:size-10 bg-background/80 backdrop-blur-sm"
+            className="size-8 bg-background/80 backdrop-blur-sm sm:size-10"
           >
             {isFullscreen ? (
               <FiMinimize className="h-4 w-4 sm:h-5 sm:w-5" />
@@ -203,7 +203,9 @@ export function MediaViewer({ url }: MediaViewerProps) {
           </Button>
         </div>
 
-        <div className={`media-container ${fullscreenClass} p-2 sm:p-4 md:p-6 h-full w-full flex items-center justify-center`}>
+        <div
+          className={`media-container ${fullscreenClass} flex h-full w-full items-center justify-center p-2 sm:p-4 md:p-6`}
+        >
           {isFullscreen && (
             <div className="absolute right-4 top-4 z-50">
               <Button
@@ -220,7 +222,7 @@ export function MediaViewer({ url }: MediaViewerProps) {
           <img
             src={url}
             alt="Media preview"
-            className="max-h-full max-w-full object-contain rounded-md"
+            className="max-h-full max-w-full rounded-md object-contain"
             style={{ maxHeight: isFullscreen ? "95vh" : "calc(100% - 2rem)" }}
           />
         </div>
@@ -236,7 +238,7 @@ export function MediaViewer({ url }: MediaViewerProps) {
             variant="secondary"
             size="icon"
             onClick={toggleFullscreen}
-            className="size-8 sm:size-10 bg-background/80 backdrop-blur-sm"
+            className="size-8 bg-background/80 backdrop-blur-sm sm:size-10"
           >
             {isFullscreen ? (
               <FiMinimize className="h-4 w-4 sm:h-5 sm:w-5" />
@@ -246,7 +248,9 @@ export function MediaViewer({ url }: MediaViewerProps) {
           </Button>
         </div>
 
-        <div className={`media-container ${fullscreenClass} p-2 sm:p-4 md:p-6 h-full w-full flex items-center justify-center`}>
+        <div
+          className={`media-container ${fullscreenClass} flex h-full w-full items-center justify-center p-2 sm:p-4 md:p-6`}
+        >
           {isFullscreen && (
             <div className="absolute right-4 top-4 z-50">
               <Button
@@ -279,7 +283,7 @@ export function MediaViewer({ url }: MediaViewerProps) {
             variant="secondary"
             size="icon"
             onClick={toggleFullscreen}
-            className="size-8 sm:size-10 bg-background/80 backdrop-blur-sm"
+            className="size-8 bg-background/80 backdrop-blur-sm sm:size-10"
           >
             {isFullscreen ? (
               <FiMinimize className="h-4 w-4 sm:h-5 sm:w-5" />
@@ -289,7 +293,9 @@ export function MediaViewer({ url }: MediaViewerProps) {
           </Button>
         </div>
 
-        <div className={`media-container ${fullscreenClass} p-2 sm:p-4 md:p-6 h-full w-full flex items-center justify-center`}>
+        <div
+          className={`media-container ${fullscreenClass} flex h-full w-full items-center justify-center p-2 sm:p-4 md:p-6`}
+        >
           {isFullscreen && (
             <div className="absolute right-4 top-4 z-50">
               <Button
@@ -322,7 +328,7 @@ export function MediaViewer({ url }: MediaViewerProps) {
             variant="secondary"
             size="icon"
             onClick={toggleFullscreen}
-            className="size-8 sm:size-10 bg-background/80 backdrop-blur-sm"
+            className="size-8 bg-background/80 backdrop-blur-sm sm:size-10"
           >
             {isFullscreen ? (
               <FiMinimize className="h-4 w-4 sm:h-5 sm:w-5" />
@@ -332,7 +338,9 @@ export function MediaViewer({ url }: MediaViewerProps) {
           </Button>
         </div>
 
-        <div className={`media-container ${fullscreenClass} p-2 sm:p-4 md:p-6 h-full w-full flex items-center justify-center`}>
+        <div
+          className={`media-container ${fullscreenClass} flex h-full w-full items-center justify-center p-2 sm:p-4 md:p-6`}
+        >
           {isFullscreen && (
             <div className="absolute right-4 top-4 z-50">
               <Button
@@ -347,12 +355,10 @@ export function MediaViewer({ url }: MediaViewerProps) {
           )}
 
           <div className="w-full max-w-md rounded-lg bg-muted/20 p-4 sm:p-8">
-            <h3 className="mb-4 text-center text-lg sm:text-xl font-medium">Audio Player</h3>
-            <audio
-              src={url}
-              controls
-              className="w-full"
-            />
+            <h3 className="mb-4 text-center text-lg font-medium sm:text-xl">
+              Audio Player
+            </h3>
+            <audio src={url} controls className="w-full" />
           </div>
         </div>
       </div>
@@ -367,7 +373,7 @@ export function MediaViewer({ url }: MediaViewerProps) {
             variant="secondary"
             size="icon"
             onClick={toggleFullscreen}
-            className="size-8 sm:size-10 bg-background/80 backdrop-blur-sm"
+            className="size-8 bg-background/80 backdrop-blur-sm sm:size-10"
           >
             {isFullscreen ? (
               <FiMinimize className="h-4 w-4 sm:h-5 sm:w-5" />
@@ -377,7 +383,9 @@ export function MediaViewer({ url }: MediaViewerProps) {
           </Button>
         </div>
 
-        <div className={`media-container ${fullscreenClass} p-2 sm:p-4 md:p-6 h-full w-full flex items-center justify-center`}>
+        <div
+          className={`media-container ${fullscreenClass} flex h-full w-full items-center justify-center p-2 sm:p-4 md:p-6`}
+        >
           {isFullscreen && (
             <div className="absolute right-4 top-4 z-50">
               <Button
@@ -391,7 +399,7 @@ export function MediaViewer({ url }: MediaViewerProps) {
             </div>
           )}
 
-          <div className="max-w-md p-4 sm:p-8 text-center">
+          <div className="max-w-md p-4 text-center sm:p-8">
             <svg
               width="80"
               height="80"
@@ -422,15 +430,13 @@ export function MediaViewer({ url }: MediaViewerProps) {
                 strokeLinecap="round"
               />
             </svg>
-            <h3 className="mb-2 text-lg sm:text-xl font-medium">Unknown File Type</h3>
-            <p className="mb-4 text-sm sm:text-base text-muted-foreground">
+            <h3 className="mb-2 text-lg font-medium sm:text-xl">
+              Unknown File Type
+            </h3>
+            <p className="mb-4 text-sm text-muted-foreground sm:text-base">
               This file type isn't supported for preview
             </p>
-            <Button
-              variant="outline"
-              className="mt-2"
-              onClick={openInNewTab}
-            >
+            <Button variant="outline" className="mt-2" onClick={openInNewTab}>
               Open file in new tab
             </Button>
           </div>
